@@ -12,6 +12,7 @@ print("server is ready to receive")
 #sending the server into listening mode 
 while 1:
     #server is gettinbg the client info
+    #plus we also get the address 
     msgandaddress=serverSocket.recvfrom(1024)
     #server is reading the text 
     a=(msgandaddress[0].decode())    
