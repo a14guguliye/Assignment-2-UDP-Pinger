@@ -15,9 +15,8 @@ while 1:
     msgandaddress=serverSocket.recvfrom(1024)
     #server is reading the text 
     a=(msgandaddress[0].decode())    
-    #server is opening the file 
-    #f=open(a,mode='r')
-    #server is reading the composition of the file 
+    
+    #server is sending the response 
     filecomposition="response sent for "+str(a)
     #server is sending the composition to the client 
     serverSocket.sendto(filecomposition.encode(),msgandaddress[1])
